@@ -26,22 +26,23 @@ function App() {
   }
   else {
     console.log("In Production Mode.!!!");
-    managementApiOptions.appId = process.env.APP_ID || managementApiConfigOptions.appId
-    managementApiOptions.appSecret = process.env.APP_SECRET || managementApiConfigOptions.appSecret
-    managementApiOptions.appNameIDM = process.env.APP_NAME_IDM || managementApiConfigOptions.appNameIDM
-    managementApiOptions.adminRoleName = process.env.ADMIN_ROLE_NAME || managementApiConfigOptions.adminRoleName
-    managementApiOptions.managementApiIp = process.env.MANAGEMENT_API_IP || managementApiConfigOptions.managementApiIp
-    managementApiOptions.managementApiPort = process.env.MANAGEMENT_API_PORT || managementApiConfigOptions.managementApiPort
-    managementApiOptions.keyRockIp = process.env.KEYROCK_IP || managementApiConfigOptions.keyRockIp
-    managementApiOptions.keyRockPort = process.env.KEYROCK_PORT || managementApiConfigOptions.keyRockPort
-    managementApiOptions.orionIp = process.env.ORION_IP || managementApiConfigOptions.orionIp
-    managementApiOptions.orionPort = process.env.ORION_PORT || managementApiConfigOptions.orionPort
-    managementApiOptions.sthIp = process.env.STH_IP || managementApiConfigOptions.sthIp
-    managementApiOptions.sthPort = process.env.STH_PORT || managementApiConfigOptions.sthPort
-    managementApiOptions.deviceType = process.env.DEVICE_TYPE || managementApiConfigOptions.deviceType
-    managementApiOptions.fiwareService = process.env.FIWARE_SERVICE || managementApiConfigOptions.fiwareService
-    managementApiOptions.fiwareServicePath = process.env.FIWARE_SERVICE_PATH || managementApiConfigOptions.fiwareServicePath
+    managementApiOptions.appId = window._env_.APP_ID || managementApiConfigOptions.appId
+    managementApiOptions.appSecret = window._env_.APP_SECRET || managementApiConfigOptions.appSecret
+    managementApiOptions.appNameIDM = window._env_.APP_NAME_IDM || managementApiConfigOptions.appNameIDM
+    managementApiOptions.adminRoleName = window._env_.ADMIN_ROLE_NAME || managementApiConfigOptions.adminRoleName
+    managementApiOptions.managementApiIp = window._env_.MANAGEMENT_API_IP || managementApiConfigOptions.managementApiIp
+    managementApiOptions.managementApiPort = window._env_.MANAGEMENT_API_PORT || managementApiConfigOptions.managementApiPort
+    managementApiOptions.keyRockIp = window._env_.KEYROCK_IP || managementApiConfigOptions.keyRockIp
+    managementApiOptions.keyRockPort = window._env_.KEYROCK_PORT || managementApiConfigOptions.keyRockPort
+    managementApiOptions.orionIp = window._env_.ORION_IP || managementApiConfigOptions.orionIp
+    managementApiOptions.orionPort = window._env_.ORION_PORT || managementApiConfigOptions.orionPort
+    managementApiOptions.sthIp = window._env_.STH_IP || managementApiConfigOptions.sthIp
+    managementApiOptions.sthPort = window._env_.STH_PORT || managementApiConfigOptions.sthPort
+    managementApiOptions.deviceType = window._env_.DEVICE_TYPE || managementApiConfigOptions.deviceType
+    managementApiOptions.fiwareService = window._env_.FIWARE_SERVICE || managementApiConfigOptions.fiwareService
+    managementApiOptions.fiwareServicePath = window._env_.FIWARE_SERVICE_PATH || managementApiConfigOptions.fiwareServicePath
     console.log(process.env.MANAGEMENT_API_IP);
+    console.log(window._env_.MANAGEMENT_API_IP);
   }
 
 
