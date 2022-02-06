@@ -6,7 +6,7 @@ touch ./env-config.js
 
 # Add assignment 
 echo "window._env_ = { \
- PORT: \"$PORT\",\
+ PORT: \"$PORT\",\ 
  APP_ID: \"$APP_ID\", \
  APP_SECRET: \"$APP_SECRET\", \
  APP_NAME_IDM: \"$APP_NAME_IDM\", \
