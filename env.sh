@@ -22,13 +22,4 @@ echo "window._env_ = { \
  STH_PORT: $STH_PORT, \
  FIWARE_SERVICE: $FIWARE_SERVICE, \
  FIWARE_SERVICE_PATH: $FIWARE_SERVICE_PATH }  " >> ./env-config.js
- 
-
-
-
-
-
-
-
-    managementApiOptions.deviceType = process.env.DEVICE_TYPE || managementApiConfigOptions.deviceType
 
