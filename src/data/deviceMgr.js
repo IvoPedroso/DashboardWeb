@@ -90,8 +90,8 @@ class deviceMgr {
         let res = await axios.get(`http://${this.managementApiOptions.orionIp}:${this.managementApiOptions.orionPort}/v2/entities/`,
             {
                 headers: {
-                    "fiware-service": this.managementApiOptions.fiwareService,
-                    "fiware-servicepath": this.managementApiOptions.fiwareServicePath,
+                    "Fiware-Service": this.managementApiOptions.fiwareService,
+                    "Fiware-ServicePath": this.managementApiOptions.fiwareServicePath,
                     'Authorization': `Bearer ${userData.accessToken}`
                 },
                 params: {
