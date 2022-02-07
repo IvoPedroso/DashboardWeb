@@ -7,7 +7,7 @@ class UserMgr {
 
   constructor(managementApiOptions) {
     this.managementApiOptions = managementApiOptions;
-    this.AutorizationToken = Base64.stringify(Utf8.parse(`${managementApiOptions.appId}:${managementApiOptions.appSecret}`))
+    this.AutorizationToken = Base64.stringify(Utf8.parse(`${window._env_.APP_ID}:${window._env_.APP_SECRET}`))
   }
 
   loginUser(user, pass, responseSet) {
