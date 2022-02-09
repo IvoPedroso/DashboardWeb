@@ -31,7 +31,11 @@ export default function Login({ userMgr, setToken, setAccessToken }) {
 
     const onSubmit = async (values) => {
         setLoading(true);
+        console.log(values.email)
+        console.log(values.password)
         userMgr.loginUser(values.email, values.password, (resp) => {
+            console.log('Respppppppppppp')
+            console.log(resp)
             if (resp.success && resp.token) {
                 setToken(resp.token);
                 setMessage("Login com sucesso!");
