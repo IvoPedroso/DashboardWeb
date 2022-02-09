@@ -21,11 +21,8 @@ function App() {
   //const managementApiOptions2 = config.get("managementApiOptions");
   if (process.env.NODE_ENV === "development") {
     managementApiOptions = managementApiConfigOptions
-    console.log("In Development Mode.!!!");
-    console.log(window._env_.MANAGEMENT_API_IP);
   }
   else {
-    console.log("In Production Mode.!!!");
     managementApiOptions.appId = window._env_.APP_ID || managementApiConfigOptions.appId
     managementApiOptions.appSecret = window._env_.APP_SECRET || managementApiConfigOptions.appSecret
     managementApiOptions.appNameIDM = window._env_.APP_NAME_IDM || managementApiConfigOptions.appNameIDM
@@ -41,8 +38,6 @@ function App() {
     managementApiOptions.deviceType = window._env_.DEVICE_TYPE || managementApiConfigOptions.deviceType
     managementApiOptions.fiwareService = window._env_.FIWARE_SERVICE || managementApiConfigOptions.fiwareService
     managementApiOptions.fiwareServicePath = window._env_.FIWARE_SERVICE_PATH || managementApiConfigOptions.fiwareServicePath
-    console.log(process.env.MANAGEMENT_API_IP);
-    console.log(window._env_.MANAGEMENT_API_IP);
   }
 
 
