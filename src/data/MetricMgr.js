@@ -49,6 +49,9 @@ class MetricMgr {
     }
 
     getAllMetrics(userData, responseSet) {
+        console.log("Tentar ->:")
+        console.log(`http://${this.managementApiOptions.managementApiIp}:${this.managementApiOptions.managementApiPort}/api/getallmetrics`);
+        console.log(`Bearer ${userData.accessToken}`);
         axios.get(
             `http://${this.managementApiOptions.managementApiIp}:${this.managementApiOptions.managementApiPort}/api/getallmetrics`, {
                 headers: {
