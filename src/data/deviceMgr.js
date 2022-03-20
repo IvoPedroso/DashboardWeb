@@ -77,7 +77,9 @@ class deviceMgr {
                     (dev) => {
                         return devices.push(dev.device_id)
                     })
-
+                console.log("Get Devices:")
+                console.log(devices);
+                console.log(res.data);
                 responseSet({ success: true, data: devices })
             }).catch(error => {
                 responseSet({ success: false, msg: error })
