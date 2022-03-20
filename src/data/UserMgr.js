@@ -30,8 +30,6 @@ class UserMgr {
 
     axios(config)
       .then(function (response) {
-        console.log('Resposta Axios Keyrock')
-        console.log(response.headers)
         responseSet({ success: true, token: response.headers['x-subject-token'] })
         console.info("Login Success");
       })

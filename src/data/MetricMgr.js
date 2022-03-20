@@ -59,7 +59,8 @@ class MetricMgr {
             .then((res) => {
                 responseSet({ success: true, data: res.data })
             }).catch(error => {
-                responseSet({ success: false, msg: error })
+                responseSet({ success: false, msg: error, data:[] })
+                console.log("Error:->")
                 console.log(error)
             });
     }
