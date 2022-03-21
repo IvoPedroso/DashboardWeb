@@ -66,9 +66,10 @@ class deviceMgr {
     }
 
     listRegisteredDevices(userData, responseSet) {
+        console.log("List Devices")
         axios.get(
-            `http://${this.managementApiOptions.managementApiIp}:${this.managementApiOptions.managementApiPort}/api/unregisterdevice`,
-            this.managementApiOptions.managementApiURI + "devices",{headers:{
+            `http://${this.managementApiOptions.managementApiIp}:${this.managementApiOptions.managementApiPort}/api/devices`,
+            {headers:{
                 'Authorization': `Bearer ${userData.accessToken}`}}
         )
             .then((res) => {
