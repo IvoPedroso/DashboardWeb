@@ -105,7 +105,7 @@ class deviceMgr {
     }
 
     async GetLastMonthMaxReadings(userData, deviceName, attributeName, beginDate, endDate, resolution, aggregationType) {
-        const url = `http://${this.managementApiOptions.sthHost}:${this.managementApiOptions.sthPort}/STH/v1/contextEntities/type/LoraDevice/id/${deviceName}/attributes/${attributeName}`;
+        const url = `http://${this.managementApiOptions.sthIp}:${this.managementApiOptions.sthPort}/STH/v1/contextEntities/type/LoraDevice/id/${deviceName}/attributes/${attributeName}`;
         const headers = {
             "fiware-service": this.managementApiOptions.fiwareService,
             "fiware-servicepath": this.managementApiOptions.fiwareServicePath,
