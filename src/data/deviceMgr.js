@@ -109,7 +109,8 @@ class deviceMgr {
         const headers = {
             "fiware-service": this.managementApiOptions.fiwareService,
             "fiware-servicepath": this.managementApiOptions.fiwareServicePath,
-            'Authorization': `Bearer ${userData.accessToken}`
+            'Authorization': `Bearer ${userData.accessToken}`,
+            "Origin:*"
         };
         const parameters = {
             aggrMethod: aggregationType,
